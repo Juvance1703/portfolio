@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juvance Renot — Portfolio</title>
+<meta name="description" content="Portfolio de Juvance Renot, étudiant en Informatique et en Communication Numérique &amp; Management de Projet.">
+
+<!-- Polices : à conserver ou remplacer selon vos préférences -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Barre de progression de lecture -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#accueil" class="logo">JR<span class="logo-dot">.</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#accueil" class="nav-link active">Accueil</a>
+      <a href="#parcours" class="nav-link">Parcours</a>
+      <a href="#competences" class="nav-link">Compétences</a>
+      <a href="#projets" class="nav-link">Projets</a>
+      <a href="#apropos" class="nav-link">À propos</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary btn-small nav-cta">Me contacter</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg-shape" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Étudiant en Informatique &amp; Communication Numérique</p>
+        <h1 class="hero-title">JUVANCE Vahinisoa Renot</h1>
+        <p class="hero-subtitle">
+          De la logique du code à la stratégie des projets numériques —
+          un parcours construit entre développement informatique
+          et communication digitale.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="assets/CV-Juvance-Renot.pdf" class="btn btn-outline" id="cvBtn" download="CV-Juvance-Renot.pdf">Télécharger mon CV</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label">Ans en Informatique</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number-text">M1</span>
+            <span class="stat-label">Communication Numérique</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="4">0</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="avatar-frame">
+          <img src="assets/photo.jpg" alt="Juvance Renot" class="avatar-photo">
+        </div>
+        <div class="floating-badge badge-1">Licence Informatique</div>
+        <div class="floating-badge badge-2">Master Communication Numérique</div>
+      </div>
+    </div>
+    <a href="#parcours" class="scroll-cue" aria-label="Défiler vers le parcours">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ PARCOURS ACADÉMIQUE ============ -->
+  <section class="section" id="parcours">
+    <div class="section-head reveal">
+      <p class="eyebrow">Parcours académique</p>
+      <h2>Deux disciplines, une seule trajectoire</h2>
+      <p class="section-intro">
+        Un socle solide en informatique à l'IFT Fianarantsoa, prolongé
+        aujourd'hui par une spécialisation en communication numérique
+        et management de projet.
+      </p>
+    </div>
+
+    <div class="timeline-wrap reveal">
+      <svg class="timeline-svg" id="timelineSvg" viewBox="0 0 120 900" preserveAspectRatio="none" aria-hidden="true">
+        <path id="timelinePath" class="timeline-path" d="M 60 20 L 60 480 C 60 520 40 520 40 560 L 40 860" />
+        <path id="timelineBranch" class="timeline-path" d="M 60 480 C 60 520 80 520 80 560 L 80 860" />
+      </svg>
+
+      <ol class="timeline-list">
+        <li class="timeline-item track-info">
+          <span class="timeline-year">Année 1</span>
+          <div class="timeline-card">
+            <span class="timeline-tag tag-info">Informatique</span>
+            <h3>1ère année — IFT Fianarantsoa</h3>
+            <p>Fondamentaux de l'informatique : algorithmique, programmation de base, bureautique et introduction aux systèmes d'exploitation.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item track-info">
+          <span class="timeline-year">Année 2</span>
+          <div class="timeline-card">
+            <span class="timeline-tag tag-info">Informatique</span>
+            <h3>2ème année — IFT Fianarantsoa</h3>
+            <p>Approfondissement : programmation orientée objet, bases de données, réseaux informatiques et structures de données.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item track-info">
+          <span class="timeline-year">Année 3</span>
+          <div class="timeline-card">
+            <span class="timeline-tag tag-info">Informatique</span>
+            <h3>3ème année — IFT Fianarantsoa</h3>
+            <p>Projet de fin d'études et spécialisation. Obtention du <strong>diplôme de Licence en Informatique</strong>.</p>
+            <span class="timeline-badge">🎓 Licence obtenue</span>
+          </div>
+        </li>
+
+        <li class="timeline-item track-comm">
+          <span class="timeline-year">Master 1</span>
+          <div class="timeline-card">
+            <span class="timeline-tag tag-comm">Communication Numérique</span>
+            <h3>Master 1 — Communication Numérique &amp; Management de Projet</h3>
+            <p>Bifurcation vers la stratégie digitale : communication numérique, conduite et pilotage de projets.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item track-comm">
+          <span class="timeline-year">Aujourd'hui</span>
+          <div class="timeline-card">
+            <span class="timeline-tag tag-comm">En cours</span>
+            <h3>Poursuite du Master — Communication Numérique &amp; Management de Projet</h3>
+            <p>Approfondissement des compétences en gestion de projet numérique, stratégie de contenu et pilotage d'équipes.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES ============ -->
+  <!-- Prototype : liste indicative, à ajuster selon vos compétences réelles -->
+  <section class="section section-alt" id="competences">
+    <div class="section-head reveal">
+      <p class="eyebrow">Compétences</p>
+      <h2>Ce que je mobilise au quotidien</h2>
+      <p class="section-intro">Contenu de démonstration — à remplacer par vos compétences précises.</p>
+    </div>
+
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <h3>Développement</h3>
+        <ul class="skill-tags">
+          <li>HTML / CSS / JavaScript</li>
+          <li>Dart &amp; Flutter</li>
+          <li>Python</li>
+          <li>Bases de données (SQL)</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Communication &amp; Projet</h3>
+        <ul class="skill-tags">
+          <li>Gestion de projet agile</li>
+          <li>Stratégie de contenu digital</li>
+          <li>Réseaux sociaux &amp; médias numériques</li>
+          <li>Outils collaboratifs (Trello, Notion)</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Savoir-être</h3>
+        <ul class="skill-tags">
+          <li>Travail en équipe</li>
+          <li>Communication claire</li>
+          <li>Adaptabilité</li>
+          <li>Autonomie &amp; rigueur</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <!-- 4 prototypes de projets : textes, images/vidéos et liens à remplacer -->
+  <section class="section" id="projets">
+    <div class="section-head reveal">
+      <p class="eyebrow">Projets</p>
+      <h2>Quatre projets, deux univers</h2>
+      <p class="section-intro">Prototypes de présentation — remplacez les visuels, descriptions et liens par vos projets réels.</p>
+    </div>
+
+    <div class="projects-grid reveal">
+
+      <article class="project-card">
+        <div class="project-media" data-placeholder="Image / Vidéo à ajouter">
+          <span class="media-icon">🖥️</span>
+        </div>
+        <div class="project-body">
+          <span class="project-domain domain-info">Informatique</span>
+          <h3>Application de gestion (prototype)</h3>
+          <p>Application mobile de gestion développée en Flutter, avec suivi des opérations et tableau de bord simple.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Dart</span><span>Mobile</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Voir le projet →</a>
+            <a href="#" class="link-arrow">Code source →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media" data-placeholder="Image / Vidéo à ajouter">
+          <span class="media-icon">🌐</span>
+        </div>
+        <div class="project-body">
+          <span class="project-domain domain-info">Informatique</span>
+          <h3>Site vitrine / Refonte web (prototype)</h3>
+          <p>Conception d'un site vitrine responsive, pensé pour une navigation claire et une identité visuelle cohérente.</p>
+          <div class="project-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>UI/UX</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Voir le projet →</a>
+            <a href="#" class="link-arrow">Code source →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media" data-placeholder="Image / Vidéo à ajouter">
+          <span class="media-icon">📣</span>
+        </div>
+        <div class="project-body">
+          <span class="project-domain domain-comm">Communication Numérique</span>
+          <h3>Campagne de communication digitale (prototype)</h3>
+          <p>Plan de communication multicanal pour le lancement d'un produit, incluant calendrier éditorial et supports visuels.</p>
+          <div class="project-tags">
+            <span>Stratégie</span><span>Réseaux sociaux</span><span>Contenu</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Voir le projet →</a>
+            <a href="#" class="link-arrow">Voir le rapport →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media" data-placeholder="Image / Vidéo à ajouter">
+          <span class="media-icon">📊</span>
+        </div>
+        <div class="project-body">
+          <span class="project-domain domain-comm">Management de Projet</span>
+          <h3>Plan de gestion de projet (prototype)</h3>
+          <p>Élaboration d'un plan de projet complet : périmètre, planning, ressources et gestion des risques.</p>
+          <div class="project-tags">
+            <span>Planification</span><span>Agilité</span><span>Pilotage</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Voir le projet →</a>
+            <a href="#" class="link-arrow">Voir le rapport →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ À PROPOS / INFOS COMPLÉMENTAIRES ============ -->
+  <!-- Prototype : sections classiques d'un portfolio, à compléter -->
+  <section class="section section-alt" id="apropos">
+    <div class="section-head reveal">
+      <p class="eyebrow">À propos</p>
+      <h2>Au-delà du CV</h2>
+      <p class="section-intro">Informations types d'un portfolio — contenu de démonstration à personnaliser.</p>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="about-card">
+        <h3>Langues</h3>
+        <ul class="about-list">
+          <li>Malagasy <span class="level">— Langue maternelle</span></li>
+          <li>Français <span class="level">— Courant</span></li>
+          <li>Anglais <span class="level">— Intermédiaire</span></li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h3>Certifications</h3>
+        <ul class="about-list">
+          <li>Certification à ajouter</li>
+          <li>Certification à ajouter</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h3>Centres d'intérêt</h3>
+        <ul class="about-list">
+          <li>Nouvelles technologies</li>
+          <li>Réseaux sociaux &amp; médias digitaux</li>
+          <li>Lecture / veille numérique</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h3>Disponibilité</h3>
+        <ul class="about-list">
+          <li>Ouvert(e) aux stages</li>
+          <li>Ouvert(e) aux projets freelance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section-head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Discutons de votre prochain projet</h2>
+      <p class="section-intro">Remplissez le formulaire, votre logiciel de messagerie s'ouvrira automatiquement pour envoyer le message.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          <span class="form-error" id="nameError"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+          <span class="form-error" id="emailError"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+        <p class="form-success" id="formSuccess" role="status"></p>
+      </form>
+
+      <div class="contact-side">
+        <h3>Autres moyens de me joindre</h3>
+        <a href="mailto:juvancerenot1703@gmail.com" class="contact-link">
+          <span class="contact-icon">✉️</span> juvancerenot1703@gmail.com
+        </a>
+        <a href="https://github.com/juvance1703" class="contact-link">
+          <span class="contact-icon">💻 Visiter mon Git</span> 
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-icon">📍</span> Fianarantsoa, Madagascar
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; <span id="year"></span> Juvance Renot. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

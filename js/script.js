@@ -3,17 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Animation du nom lettre par lettre (au chargement) ---------- */
   const heroTitle = document.querySelector('.hero-title');
   if (heroTitle){
-    const fullText = heroTitle.textContent;
+    const fullText = heroTitle.textContent.trim();
     heroTitle.textContent = '';
     heroTitle.setAttribute('aria-label', fullText);
 
-    [...fullText].forEach((char, i) => {
-      const letterSpan = document.createElement('span');
-      letterSpan.className = 'letter' + (char === ' ' ? ' letter-space' : '');
-      letterSpan.textContent = char === ' ' ? '\u00A0' : char;
-      letterSpan.style.animationDelay = (i * 0.045) + 's';
-      letterSpan.setAttribute('aria-hidden', 'true');
-      heroTitle.appendChild(letterSpan);
+    const words = fullText.split(' ');
+    let letterIndex = 0;
+
+    words.forEach((word, wIndex) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'word';
+
+      [...word].forEach((char) => {
+        const letterSpan = document.createElement('span');
+        letterSpan.className = 'letter';
+        letterSpan.textContent = char;
+        letterSpan.style.animationDelay = (letterIndex * 0.045) + 's';
+        letterSpan.setAttribute('aria-hidden', 'true');
+        wordSpan.appendChild(letterSpan);
+        letterIndex++;
+      });
+
+      heroTitle.appendChild(wordSpan);
+      letterIndex++; // laisse un décalage pour l'espace entre les mots
+
+      if (wIndex < words.length - 1){
+        heroTitle.appendChild(document.createTextNode(' '));
+      }
     });
   }
 

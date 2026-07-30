@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- Animation du nom lettre par lettre (au chargement) ---------- */
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle){
+    const fullText = heroTitle.textContent;
+    heroTitle.textContent = '';
+    heroTitle.setAttribute('aria-label', fullText);
+
+    [...fullText].forEach((char, i) => {
+      const letterSpan = document.createElement('span');
+      letterSpan.className = 'letter' + (char === ' ' ? ' letter-space' : '');
+      letterSpan.textContent = char === ' ' ? '\u00A0' : char;
+      letterSpan.style.animationDelay = (i * 0.045) + 's';
+      letterSpan.setAttribute('aria-hidden', 'true');
+      heroTitle.appendChild(letterSpan);
+    });
+  }
+
   /* ---------- Année automatique dans le footer ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

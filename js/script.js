@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = mainNav.classList.toggle('open');
       navToggle.classList.toggle('open', isOpen);
       navToggle.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
     });
 
     mainNav.querySelectorAll('a').forEach(link => {
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.classList.remove('open');
         navToggle.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
       });
     });
   }

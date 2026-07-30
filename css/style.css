@@ -34,6 +34,7 @@
   --shadow-lg: 0 24px 60px rgba(11,42,85,0.14);
 
   --container: 1140px;
+  --header-h: 74px;
 }
 
 *{ box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,6 +49,7 @@ body{
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   max-width: 100%;
+  padding-top: var(--header-h);
 }
 
 img{ max-width: 100%; display: block; }
@@ -81,6 +83,7 @@ h3{ font-size: 1.15rem; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 110px 24px;
+  scroll-margin-top: var(--header-h);
 }
 .section-alt{
   background: var(--bg-alt);
@@ -121,15 +124,19 @@ h3{ font-size: 1.15rem; }
    HEADER / NAV
    ========================================================== */
 .site-header{
-  position: sticky; top: 0; z-index: 500;
+  position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 500;
   background: rgba(246,248,252,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .site-header.scrolled{
   border-color: var(--border);
   box-shadow: var(--shadow-sm);
+}
+body.nav-open .site-header{
+  background: var(--bg);
+  backdrop-filter: none;
 }
 .header-inner{
   max-width: var(--container);
@@ -205,6 +212,7 @@ h3{ font-size: 1.15rem; }
   min-height: 88vh;
   display: flex; align-items: center;
   overflow: hidden;
+  scroll-margin-top: var(--header-h);
 }
 .hero-bg-shape{
   position: absolute; top: -180px; right: -220px;
@@ -537,11 +545,11 @@ h3{ font-size: 1.15rem; }
 
 @media (max-width: 860px){
   .main-nav{
-    position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+    position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
     background: var(--bg); flex-direction: column; align-items: center;
     justify-content: flex-start; gap: 0; padding-top: 30px;
     transform: translateX(100%); transition: transform 0.35s ease;
-    z-index: 400;
+    z-index: 400; overflow-y: auto;
   }
   .main-nav.open{ transform: translateX(0); }
   .main-nav a{ padding: 18px 0; font-size: 1.1rem; width: 100%; text-align: center; }
@@ -553,6 +561,7 @@ h3{ font-size: 1.15rem; }
 }
 
 @media (max-width: 480px){
+  :root{ --header-h: 60px; }
   .section{ padding: 64px 16px; }
   .hero{ padding: 60px 16px 40px; min-height: auto; }
   .badge-1, .badge-2{ display: none; }
